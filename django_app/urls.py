@@ -4,5 +4,7 @@ from django.conf.urls import url, include  # Notice we added include
 # Why won't we use the admin module? Because we're focusing on how to code, 
 # not on how to help people who do not know how to code how to manage the app.
 urlpatterns = [
-    url(r'^', include('apps.blog_app.urls')), # And now we use the include function to pull in our first_app.urls...
+    url(r'^', include('apps.users_app.urls')),
+    url(r'^blogs', include('apps.blog_app.urls')), 
+    url(r'^surveys', include('apps.surveys_app.urls')),
 ]
